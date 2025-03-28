@@ -28,8 +28,8 @@ jobs:
         source $HOME/.rvm/scripts/rvm
         rvm use system
         rvm install jruby-head
-        rvm --default use jruby-head
         tail -100 /home/runner/.rvm/log/1743161614_jruby-head/mvnw.log
+        rvm --default use jruby-head
     - name: Install dependencies
       run: |
         source $HOME/.rvm/scripts/rvm
