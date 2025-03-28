@@ -21,8 +21,10 @@ jobs:
     - name: Set up jruby
       run: |
         source $HOME/.rvm/scripts/rvm
-        rvm install jruby-9.4.13.0
+        rvm install jruby-9.4.9.0
+        rvm --default use jruby
         rvm install jruby-head
+        rvm --default use jruby-head
         rvm --default use jruby
     - name: Install dependencies
       run: |
