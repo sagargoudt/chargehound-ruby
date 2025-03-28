@@ -24,8 +24,6 @@ jobs:
     - name: Set up Ruby
       run: |
         source $HOME/.rvm/scripts/rvm
-        java --version
-        rvm --version
         rvm install ${{ matrix.ruby }}
         rvm --default use ${{ matrix.ruby }}
     - name: Install dependencies
