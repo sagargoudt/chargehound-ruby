@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby: [ 'jruby', 'jruby-head' ]
+        ruby: [ 'ruby', 'jruby', 'jruby-head' ]
     name: Test Ruby ${{ matrix.ruby }}
     steps:
     - name: Install libraries
@@ -26,7 +26,7 @@ jobs:
         source $HOME/.rvm/scripts/rvm
         java --version
         rvm --version
-        rvm install ${{ matrix.ruby }} --binary --fuzzy
+        rvm install ${{ matrix.ruby }}
         rvm --default use ${{ matrix.ruby }}
     - name: Install dependencies
       run: |
