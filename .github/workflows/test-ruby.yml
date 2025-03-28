@@ -26,6 +26,7 @@ jobs:
     - name: Set up jruby-head
       run: |
         source $HOME/.rvm/scripts/rvm
+        rvm use system
         rvm install jruby-head
         rvm --default use jruby-head
     - name: Install dependencies
