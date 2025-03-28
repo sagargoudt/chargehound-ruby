@@ -24,13 +24,12 @@ jobs:
     - name: Set up Ruby
       run: |
         source $HOME/.rvm/scripts/rvm
-        rvm autolibs disable
-        rvm install ${{ matrix.ruby }}
-        rvm --default use ${{ matrix.ruby }}
+        sudo rvm install ${{ matrix.ruby }}
+        sudo rvm --default use ${{ matrix.ruby }}
     - name: Install dependencies
       run: |
         source $HOME/.rvm/scripts/rvm
-        gem install bundler --no-force
+        gem install bundler --no-document
         bundle install
     - name: Run test
       run: |
