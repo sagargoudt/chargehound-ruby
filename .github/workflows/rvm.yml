@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby: [ 'ruby' ]
+        ruby: [ 'jruby' ]
     name: Test Ruby ${{ matrix.ruby }}
     steps:
     - name: Install libraries
